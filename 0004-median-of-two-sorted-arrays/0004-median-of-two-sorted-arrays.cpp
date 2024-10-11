@@ -1,6 +1,9 @@
 class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        
+        // First Method
+        
         vector<int> merge;
         int i = 0, j = 0, size1 = nums1.size(), size2 = nums2.size();
 
@@ -28,6 +31,8 @@ public:
         int n = merge.size();
         if(n%2 == 0) return (merge[n/2 - 1] + merge[n/2]) / 2.0;
         else return merge[n/2];
+
+        // Second Method
 
         // vector<int>merge;
         // if(nums1.empty() && nums2.empty()) return 0;
