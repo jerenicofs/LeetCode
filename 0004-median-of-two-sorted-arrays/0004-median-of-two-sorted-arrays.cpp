@@ -40,7 +40,7 @@ public:
         }
         sort(merge.begin(), merge.end());
         int n = merge.size();
-        if(n%2 == 0) return (merge[n/2 - 1] + merge[n/2]) / 2.0;
-        else return merge[n/2];
+        if(n%2 == 1) return merge[n/2];
+        else return (merge[n/2 - 1] + merge[n/2]) / 2.0;
     }
 };
