@@ -31,7 +31,7 @@ public:
         // else return merge[n/2];
 
         vector<int>merge;
-        if(nums1.empty() && nums2.empty()) return NULL;
+        if(nums1.empty() && nums2.empty()) return 0;
         else if(nums1.empty()) merge = nums2;
         else if(nums2.empty()) merge = nums1;
         else{
