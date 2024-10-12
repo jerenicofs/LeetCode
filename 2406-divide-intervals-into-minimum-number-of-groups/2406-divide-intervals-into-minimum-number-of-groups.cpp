@@ -17,8 +17,7 @@ public:
         }
         int size = start.size(), track = 0, ct = 0;
         for(int i = 0; i < size; i++){
-            if(end[track]  <  start[i]){
-                cout<< "Masuk if\n";
+            if(start[i] > end[track] ){
                 track++;
             }
             else ct++;
