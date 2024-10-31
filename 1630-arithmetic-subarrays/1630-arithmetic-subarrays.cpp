@@ -2,7 +2,6 @@ class Solution {
 public:
     vector<bool> checkArithmeticSubarrays(vector<int>& nums, vector<int>& l, vector<int>& r) {
         vector<bool> ans;
-        unordered_map<int, int> m;
         for(int i = 0; i < l.size(); i++){
             vector<int> curr;
             for(int j = l[i]; j <= r[i]; j++){
