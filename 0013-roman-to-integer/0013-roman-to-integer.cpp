@@ -1,21 +1,23 @@
 class Solution {
 public:
     int romanToInt(string s) {
-        unordered_map <char, int> x;
-        x.insert({'I', 1});
-        x.insert({'V', 5});
-        x.insert({'X', 10});
-        x.insert({'L', 50});
-        x.insert({'C', 100});
-        x.insert({'D', 500});
-        x.insert({'M', 1000});
+        unordered_map<char, int> m;
+        
+        m['I'] = 1;
+        m['V'] = 5;
+        m['X'] = 10;
+        m['L'] = 50;
+        m['C'] = 100;
+        m['D'] = 500;
+        m['M'] = 1000;
 
-        int sum = 0;
-
-        for(int i = 0; i < s.size() ; i++){
-            if(x[s[i]] < x[s[i+1]]) sum -= x[s[i]];
-            else sum += x[s[i]];
+        int ans = 0;
+        int n = s.size();
+        for(int i = 0; i < n; i++){
+            if(m[s[i]] < m[s[i + 1]]) ans -= m[s[i]];
+            else ans += m[s[i]];
         }
-        return sum;
+
+        return ans;
     }
 };
