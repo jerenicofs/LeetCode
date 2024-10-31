@@ -15,8 +15,8 @@ public:
                 for(int k = 1; k < curr.size(); k++){
                     if(curr[k] - curr[k - 1] != diff) flag = false;
                 }
-                if(flag)ans.push_back(true);
-                else ans.push_back(false);
+                ans.push_back(flag);
+                
             }
             curr.clear();
 
