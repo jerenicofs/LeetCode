@@ -2,8 +2,8 @@ class Solution {
 public:
 
     bool checkSort(vector<int> check){
-        for(int i = 0; i < check.size() - 1; i++){
-            if(check[i] >= check[i + 1]) return false;
+        for(int i = 1; i < check.size(); i++){
+            if(check[i] != check[i - 1] + 1) return false;
         }
         return true;
     }
